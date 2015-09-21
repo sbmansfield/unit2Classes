@@ -1,10 +1,13 @@
 
 
 /**
- * Write a description of class VendingMachine here.
+ * A vending machine holds cans of soda. To buy a can of soda, the customer needs to 
+ * insert a token into the machine. When the token is inserted, a can drops from the 
+ * can reservoir into the product delivery slot. The vending machine can be filled with more cans. 
+ * The goal is to determine how many cans and tokens are in the machine at any given time.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Sarah Mansfield
+ * @version 17 September 2015
  */
 public class VendingMachine
 {
@@ -19,7 +22,7 @@ public class VendingMachine
      */
     public VendingMachine(int cans)
     {
-        this.cans = 50;
+        this.cans = 10;
         this.tokens = 0;
     }
 
@@ -27,12 +30,8 @@ public class VendingMachine
     /**
      * Updates the token and can counts of the vending machine
      *
-     * @pre     preconditions for the method
-     *          (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *          (what the method guarantees upon completion)
-     * @param   y   description of parameter y
-     * @return  description of the return value
+     * @pre     the number of new tokens will not exceed the number of cans in the machine
+     * @param   newTokens   integer number of new tokens to be put in the machine
      */
     public void insertToken(int newTokens) 
     {
@@ -43,12 +42,7 @@ public class VendingMachine
     /**
      * This method simulates filling up the vending machine with more soda cans
      *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * @param    newCans    integer number of new cans to be added to the machine    
      */
     public void fillUp(int newCans)
     {
@@ -57,15 +51,9 @@ public class VendingMachine
 
 
     /**
-     * An example of a method - replace this comment with your own
-     *  that describes the operation of the method
+     * Gets the can count of the number of cans in the machine
      *
-     * @pre     preconditions for the method
-     *          (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *          (what the method guarantees upon completion)
-     * @param   y   description of parameter y
-     * @return  description of the return value
+     * @return  number of cans in the machine
      */
     public int getCanCount()
     {
@@ -74,15 +62,9 @@ public class VendingMachine
 
 
     /**
-     * An example of a method - replace this comment with your own
-     *  that describes the operation of the method
+     * Gets the token count of the number of tokens in the machine
      *
-     * @pre     preconditions for the method
-     *          (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *          (what the method guarantees upon completion)
-     * @param   y   description of parameter y
-     * @return  description of the return value
+     * @return  number of tokens in the machine
      */
     public int getTokenCount()
     {
