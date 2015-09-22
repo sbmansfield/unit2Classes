@@ -52,7 +52,7 @@ public class VendingMachine
 
     /**
      * Gets the can count of the number of cans in the machine
-     *
+     *  `-05
      * @return  number of cans in the machine
      */
     public int getCanCount()
