@@ -12,7 +12,7 @@ public class CityscapeViewer
      {
          JFrame frame = new JFrame();
 
-         frame.setSize(300, 400);
+         frame.setSize(700, 500);
          frame.setTitle("Cityscape");
          frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
