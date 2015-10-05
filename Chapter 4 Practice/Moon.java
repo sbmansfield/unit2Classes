@@ -1,8 +1,8 @@
 import java.awt.Graphics2D;
-import java.awt.Rectangle;
 import java.awt.geom.Ellipse2D;
-import java.awt.geom.Line2D;
-import java.awt.geom.Point2D;
+import java.awt.GradientPaint;
+import java.awt.geom.Ellipse2D.Double;
+import java.awt.Color;
 
 /**
  * A moon shape
@@ -32,8 +32,12 @@ public class Moon
      */
     public void draw(Graphics2D g2)
     {
-        Ellipse2D.Double moon1 = new Ellipse2D.Double(xLeft + 20, yTop + 20, 100, 100);
+        Ellipse2D.Double moon1 = new Ellipse2D.Double(0, 0, 100, 100);
 
+        GradientPaint redtowhite = new GradientPaint(0,0,Color.red,20, 20,Color.white);
+        
+        g2.setPaint(redtowhite);
+        g2.fill (new Ellipse2D.Double(0, 0, 100, 100));
         g2.draw(moon1);
     }
 

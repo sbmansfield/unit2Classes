@@ -1,4 +1,7 @@
-
+import java.awt.Graphics2D;
+import java.awt.Rectangle;
+import java.awt.GradientPaint;
+import java.awt.Color;
 
 /**
  * Write a description of class Sky here.
@@ -8,33 +11,35 @@
  */
 public class Sky
 {
-    /** description of instance variable x (add comment for each instance variable) */
-    private int x;
-
+    /** position of x coordinate */
+    private int xLeft;
+    /** position of y coordinate */
+    private int yTop;
+    
     /**
      * Default constructor for objects of class Sky
      */
-    public Sky()
+    public Sky(int x, int y)
     {
-        // initialise instance variables
-        x = 0;
+        xLeft = x;
+        yTop = y;
     }
 
     /**
      * An example of a method - replace this comment with your own
      *    that describes the operation of the method
      *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
      * @param    y    description of parameter y
-     * @return    description of the return value
      */
-    public int sampleMethod(int y)
+    public void draw(Graphics2D g2)
     {
-        // put your code here
-        return x+y;
+        Rectangle sky = new Rectangle(0, 0, 700, 500);
+        
+        GradientPaint nightsky = new GradientPaint(0,0,Color.black,750, 450,Color.blue);
+        
+        g2.setPaint(nightsky);
+        g2.fill (new Rectangle(0, 0, 700, 500));
+        g2.draw(sky);
     }
 
 }

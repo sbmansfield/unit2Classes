@@ -1,7 +1,7 @@
-
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import javax.swing.JComponent;
+import java.awt.Color;
 
 /**
 This component draws the cityscape shapes
@@ -15,13 +15,13 @@ public class CityscapeComponent extends JComponent
     {
         Graphics2D g2 = (Graphics2D) g;
         
-        Moon moon1 = new Moon(0,0);
-        
-        int x = getWidth() - 60;
-        int y = getHeight() - 30;
-        g2.setColor(Color.GRAY);
-        g2.fill(moon1);
-        
+        //moon
+        Moon moon1 = new Moon(100, 100);
         moon1.draw(g2);
+        
+        //sky
+        Sky nightsky = new Sky(700, 500);
+        nightsky.draw(g2);
+        
     }
 }
