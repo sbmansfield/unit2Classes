@@ -15,13 +15,16 @@ public class CityscapeComponent extends JComponent
     {
         Graphics2D g2 = (Graphics2D) g;
         
-        //moon
-        Moon moon1 = new Moon(100, 100);
-        moon1.draw(g2);
-        
         //sky
         Sky nightsky = new Sky(700, 500);
         nightsky.draw(g2);
         
+        //moon
+        Moon moon1 = new Moon(100, 100);
+        moon1.draw(g2);
+        
+        //buildings
+        Buildings b1 = new Buildings(50, 50);
+        b1.draw(g2);
     }
 }

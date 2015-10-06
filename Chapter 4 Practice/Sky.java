@@ -35,7 +35,7 @@ public class Sky
     {
         Rectangle sky = new Rectangle(0, 0, 700, 500);
         
-        GradientPaint nightsky = new GradientPaint(0,0,Color.black,750, 450,Color.blue);
+        GradientPaint nightsky = new GradientPaint(0,0,Color.black,900, 450,Color.blue);
         
         g2.setPaint(nightsky);
         g2.fill (new Rectangle(0, 0, 700, 500));
