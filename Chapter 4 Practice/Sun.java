@@ -1,40 +1,47 @@
+import java.awt.Graphics2D;
+import java.awt.geom.RectangularShape;
+import java.awt.geom.Ellipse2D;
+import java.awt.geom.Ellipse2D.Double;
 
+import java.awt.GradientPaint;
+import java.awt.Color;
 
 /**
- * Write a description of class Sun here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * A moon shape
  */
 public class Sun
 {
-    /** description of instance variable x (add comment for each instance variable) */
-    private int x;
+    /** position of x coordinate */
+    private int xLeft;
+    /** position of y coordinate */
+    private int yTop;
 
     /**
-     * Default constructor for objects of class Sun
+     * Constructs a moon with a given top right corner
+     * @param x x coordinate of top right corner
+     * @param y y coordinate of top right corner
      */
-    public Sun()
+    public Sun(int x, int y)
     {
-        // initialise instance variables
-        x = 0;
+        xLeft = x;
+        yTop = y;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * Draws the sun
      *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * @param    g2 the graphics context
      */
-    public int sampleMethod(int y)
+    public void draw(Graphics2D g2)
     {
-        // put your code here
-        return x+y;
+        Ellipse2D.Double sun1 = new Ellipse2D.Double(50, 50, 100, 100);
+
+        GradientPaint graytoyellow = new GradientPaint(150,150,Color.yellow,50, 50,Color.gray);
+        
+        g2.setPaint(graytoyellow);
+        g2.fill (sun1);
+        g2.draw(sun1);
+        
     }
 
 }

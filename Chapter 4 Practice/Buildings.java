@@ -32,10 +32,10 @@ public class Buildings
      */
     public void draw(Graphics2D g2)
     {
-        Rectangle b1 = new Rectangle(0, 700, 700, 500);
+        Rectangle b1 = new Rectangle(50, 150, 100, 400);
         
         g2.setPaint(Color.black);
-        g2.fill (new Rectangle(0, 700, 700, 500));
+        g2.fill(b1);
         g2.draw(b1);
     }
 }

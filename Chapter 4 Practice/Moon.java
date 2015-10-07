@@ -3,13 +3,8 @@ import java.awt.geom.RectangularShape;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Ellipse2D.Double;
 
-import java.awt.geom.Line2D;
-
 import java.awt.GradientPaint;
 import java.awt.Color;
-
-import java.awt.MultipleGradientPaint;
-import java.awt.RadialGradientPaint;
 
 /**
  * A moon shape
