@@ -13,26 +13,14 @@ import java.awt.MultipleGradientPaint.CycleMethod;
 
 
 /**
- * A moon shape
+ * A moon shape in the cityscape
+ * 
+ * @author Sarah Mansfield
+ * @version October 2015
  */
 public class Moon
 {
-    /** position of x coordinate */
-    private int xLeft;
-    /** position of y coordinate */
-    private int yTop;
-
-    /**
-     * Constructs a moon with a given top right corner
-     * @param x x coordinate of top right corner
-     * @param y y coordinate of top right corner
-     */
-    public Moon(int x, int y)
-    {
-        xLeft = x;
-        yTop = y;
-    }
-
+    
     /**
      * Draws the moon
      *
@@ -41,6 +29,8 @@ public class Moon
     public void draw(Graphics2D g2)
     {
         Ellipse2D.Double moon1 = new Ellipse2D.Double(10, 10, 100, 100);
+        Ellipse2D.Double moon2 = new Ellipse2D.Double(50, 300, 200, 200);
+        Ellipse2D.Double moon3 = new Ellipse2D.Double(300, 50, 150, 150);
 
         Point2D center = new Point2D.Float(10, 10);
         float radius = 400;
@@ -53,8 +43,15 @@ public class Moon
                                     CycleMethod.REFLECT);
         
         g2.setPaint(p);
+        
         g2.fill (moon1);
         g2.draw(moon1);
+        
+        g2.fill (moon2);
+        g2.draw(moon2);
+        
+        g2.fill (moon3);
+        g2.draw(moon3);
         
     }
 

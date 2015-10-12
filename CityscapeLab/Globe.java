@@ -14,27 +14,14 @@ import java.awt.MultipleGradientPaint.CycleMethod;
 import java.util.Random;
 
 /**
- * Write a description of class Globe here.
+ * a globe shape in the cityscape
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Sarah Mansfield
+ * @version October 2015
  */
 public class Globe
 {
-    /** position of x coordinate */
-    private int xLeft;
-    /** position of y coordinate */
-    private int yTop;
-
-    /**
-     * Default constructor for objects of class Globe
-     */
-    public Globe(int x, int y)
-    {
-        xLeft = x;
-        yTop = y;
-    }
-
+    
     /**
      * Draws the globe
      *

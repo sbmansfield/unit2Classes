@@ -13,12 +13,19 @@ public class CityscapeComponent extends JComponent
 {
     // define the objects in your Cityscape as instance variables
     // ...
+    private Sky nightsky;  
+    private Globe globe;
+    private Moon moon1;
+    private Buildings b1;
+
+    private String skyColor;
     
-    
-    
-    // define the CityscapeComponent contructor and intiailize all instance variables
+    // define the CityscapeComponent contructor and initialize all instance variables
     // ...
-    
+    public CityscapeComponent(String newskycolor)
+    {    
+        skyColor  = newskycolor;
+    }
     
     /**
      * This method is invoked by the Java Run-Time whenever the component needs to be redrawn.
@@ -29,24 +36,21 @@ public class CityscapeComponent extends JComponent
     {
         Graphics2D g2 = (Graphics2D) g;
         
-        // invoke the draw method on each object in your Cityscape
-        
         //sky
-        Sky nightsky = new Sky(700, 500);
-        nightsky.draw(g2);
-         
+        Sky nightsky = new Sky(skyColor);  
         //globe
-        Globe globe = new Globe(100, 100);
-        globe.draw(g2);
-        
+        Globe globe = new Globe();
         //moon
-        Moon moon1 = new Moon(100, 100);
-        moon1.draw(g2);
-        
+        Moon moon1 = new Moon();
         //buildings
-        Buildings b1 = new Buildings(50, 50);
-        b1.draw(g2);
+        Buildings b1 = new Buildings();
         
+        // invoke the draw method on each object in your Cityscape
+
+        nightsky.draw(g2);
+        globe.draw(g2);
+        moon1.draw(g2);
+        b1.draw(g2);
     }
     
     /**
@@ -58,7 +62,7 @@ public class CityscapeComponent extends JComponent
         // update the objects in the cityscape so they are animated
         // ...
         
-        
+      
         
         // request that the Java Runtime repaints this component by invoking its paintComponent method
         repaint();

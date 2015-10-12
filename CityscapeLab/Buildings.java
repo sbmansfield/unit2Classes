@@ -6,33 +6,22 @@ import java.awt.geom.RectangularShape;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Ellipse2D.Double;
 
+import java.util.Random;
+
 /**
- * Write a description of class Buildings here.
+ * the buildings in the cityscape
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Sarah Mansfield
+ * @version October 2015
  */
 public class Buildings
 {
-    /** position of x coordinate */
-    private int xLeft;
-    /** position of y coordinate */
-    private int yTop;
-
-    /**
-     * Default constructor for objects of class Buildings
-     */
-    public Buildings(int x, int y)
-    {
-        xLeft = x;
-        yTop = y;
-    }
-
+    
+    
      /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * draws the buildings
      *
-     * @param    y    description of parameter y
+     * @param    g2 the graphics context
      */
     public void draw(Graphics2D g2)
     {
@@ -65,7 +54,16 @@ public class Buildings
         g2.draw(b6);
         
         //outlines each building
-        g2.setPaint(Color.white);
+        
+        Random rand = new Random();
+
+        float r = rand.nextFloat() / 2f;
+        float g = rand.nextFloat() / 2f;
+        float b = rand.nextFloat();
+
+        Color randomColor = new Color(r, g, b);
+        
+        g2.setPaint(randomColor);
         
         g2.draw(b1);
         g2.draw(b2);

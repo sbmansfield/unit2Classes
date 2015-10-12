@@ -4,42 +4,49 @@ import java.awt.GradientPaint;
 import java.awt.Color;
 
 /**
- * Write a description of class Sky here.
+ * the sky in the cityscape
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Sarah Mansfield
+ * @version October 2015
  */
 public class Sky
 {
-    /** position of x coordinate */
-    private int xLeft;
-    /** position of y coordinate */
-    private int yTop;
+    /** color of sky (from user) */
+    
+    private String color;
+    
     
     /**
      * Default constructor for objects of class Sky
      */
-    public Sky(int x, int y)
+    public Sky(String newColor)
     {
-        xLeft = x;
-        yTop = y;
+        color = newColor;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * draws the sky
      *
-     * @param    y    description of parameter y
+     * @param    g2 the graphics context
      */
     public void draw(Graphics2D g2)
     {
         Rectangle sky = new Rectangle(0, 0, 800, 600);
+
+        GradientPaint nightsky;
+       
+        if (color.equals("blue")) 
+            nightsky = new GradientPaint(0,0,Color.black,1400, 300,Color.blue);
+        else 
+            nightsky = new GradientPaint(0,0,Color.black,1400, 300,Color.gray);
         
-        GradientPaint nightsky = new GradientPaint(0,0,Color.black,1400, 300,Color.blue);
-        
+   
         g2.setPaint(nightsky);
         g2.fill (sky);
         g2.draw(sky);
     }
-
+        
+        
 }
+
+
